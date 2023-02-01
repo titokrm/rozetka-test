@@ -1,0 +1,56 @@
+.simple-block {
+  text-align: center;
+  padding-top: rem(110);
+  padding-bottom: rem(30);
+  &__logo {
+    margin-bottom: rem(65);
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    @include fontrem(71.3, 85, 600);
+    margin-bottom: rem(120);
+    padding: 0 rem(25);
+   &--small-margin {
+    margin-bottom: rem(10);
+   }
+  }
+
+  &__picture {
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    &--with-bg {
+      background-color: #f7f7f7;
+      img {
+        margin-left: 0;
+        max-width: perc(1118, 1200);
+      }
+    }
+  }
+  @media screen and (max-width: $desk-sm-width) {
+    &__title {
+      br {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: $mob-width) {
+    &__picture--mob-no-full {
+      img {
+        max-width: 75%;
+      }      
+    }
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    &__title {
+      font-size: 3.2rem;
+    }
+  }
+}
